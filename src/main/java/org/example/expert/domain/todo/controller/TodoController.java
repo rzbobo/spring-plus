@@ -18,6 +18,8 @@ public class TodoController {
 
     private final TodoService todoService;
 
+    // Lv1. 코드 개선 퀴즈 - @Transactional의 이해
+    // 에러가 발생하지 않고 정상적으로 할 일을 저장 할 수 있도록 코드를 수정해주세요.
     @PostMapping("/todos")
     public ResponseEntity<TodoSaveResponse> saveTodo(
             @Auth AuthUser authUser,
