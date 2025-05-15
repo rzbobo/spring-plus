@@ -19,6 +19,10 @@ public class CommentController {
 
     private final CommentService commentService;
 
+    // - `CommentController` 클래스의 `getComments()` API를 호출할 때 N+1 문제가 발생하고 있어요. N+1 문제란, 데이터베이스 쿼리 성능 저하를 일으키는 대표적인 문제 중 하나로, 특히 연관된 엔티티를 조회할 때 발생해요.
+    // - 해당 문제가 발생하지 않도록 코드를 수정해주세요.
+    // - N+1 로그
+
     @PostMapping("/todos/{todoId}/comments")
     public ResponseEntity<CommentSaveResponse> saveComment(
             @Auth AuthUser authUser,
